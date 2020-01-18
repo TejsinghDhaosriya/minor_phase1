@@ -11,23 +11,46 @@
  <style>
  body
  {
- background-color:blue;
+ background-color:lightblue;
  }
+ form{
+ width
+ background-color:green;
+ }
+       .login
+            {
+               width:50%;
+               border:2px solid aqua;
+               margin:auto;
+               padding:50px;
+               padding-left:70px;
+               padding-bottom:70px;
+               font-size:20px;
+            }
+            body
+            {
+                background-color:blueviolet
+                
+            }
+            #myform table tr td  input {
+                font-size:18px;
+            }
  </style> 
 </head>
 
 <body>
  <div class="login">
+
 	<h1>Predict Salary Analysis</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="experience" placeholder="Experience" required="required" />
-        <input type="text" name="test_score" placeholder="Test Score" required="required" />
-		<input type="text" name="interview_score" placeholder="Interview Score" required="required" />
+   	<input type="text" name="experience" placeholder="Experience" required="required" />
+      <input type="text" name="test_score" placeholder="Test Score" required="required" />
+	<input type="text" name="interview_score" placeholder="Interview Score" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
+   </form>
 
    <br>
    <br>
